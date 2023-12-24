@@ -46,7 +46,7 @@ const FormHeader = ({todoCreate}) => {
                 className="inline-block h-5 w-7 md:w-6 rounded-full border-2 border-gray-300">
             </span>
             <input
-                className="outline-none w-full text-gray-400 bg-transparent dark:bg-gray-800  transition-all duration-1000 ease-in-out"
+                className="outline-none w-full text-gray-400 bg-white dark:bg-gray-800  transition-all duration-1000 ease-in-out rounded-md border-0"
                 type="text" 
                 placeholder="Create a new Todo"
                 value={title}
