@@ -91,7 +91,7 @@ function App() {
         {/* TODO Filter */}
         <SectionItems handleFilter={handleFilter}/>
         {/* Pendiente Seccion DRAG AND DROP */}
-        <footer className="text-center">Drag and DROP to reorder LIST</footer>
+        <footer className="text-center dark:text-gray-400">Drag and DROP to reorder LIST</footer>
        
       </BackgroundImg>
     </>
