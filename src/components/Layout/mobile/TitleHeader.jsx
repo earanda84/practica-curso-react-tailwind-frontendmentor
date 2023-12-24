@@ -37,7 +37,7 @@ const TitleHeader = () => {
             className="text-white text-2xl font-semibold tracking-[0.3em] uppercase">
                 todo
         </h1>
-        <Button handleClickToggleTheme={() => handleClickToggleTheme()}  icon={darkMode ? <IoSunnyOutline className="text-2xl text-gray-100" /> : <IoMoonSharp className="text-2xl " style={{ color:'#1249'}} />}/>
+        <Button handleClickToggleTheme={() => handleClickToggleTheme()}  icon={darkMode ? <IoSunnyOutline className="text-2xl text-gray-100 transition-all duration-1000 ease-in-out" /> : <IoMoonSharp className="text-2xl transition-all duration-1000 ease-in-out" style={{ color:'#1249'}} />}/>
     </div>
   )
 }
