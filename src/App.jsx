@@ -78,7 +78,7 @@ function App() {
           <FormHeader todoCreate={todoCreate}/>
           {/* TODO List (TODO Item) TODO Update & TODO Delete */}
           {/* GET para listar los items */}
-          <div className="bg-white dark:bg-gray-800 rounded-md">
+          <div className="bg-white dark:bg-gray-800 rounded-md  transition-all duration-1000 ease-in-out">
             {
               todos.map((todo) => (
                 <Article updateTodo={updateTodo} removeTodo={removeTodo} key={todo.id} id={todo.id} title={todo.title} completed={todo.completed} />

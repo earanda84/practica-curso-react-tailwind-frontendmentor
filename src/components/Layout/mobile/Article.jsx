@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 const Article = ({id, title, completed,removeTodo, updateTodo}) => {
 
   return (
-    <article className="flex gap-4 py-4 items-center border-b border-gray-300 dark:border-gray-600 px-4 text-gray-400 dark:bg-gray-800 rounded-md">
+    <article className="flex gap-4 py-4 items-center border-b border-gray-300 dark:border-gray-600 px-4 text-gray-400 dark:bg-gray-800 rounded-md  transition-all duration-1000 ease-in-out">
         <Button 
           className='flex-none'
           icon={!completed ? <MdRadioButtonUnchecked className="text-2xl"/> : <IoIosCheckmarkCircleOutline className="text-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full fill-current" color="white"/>}

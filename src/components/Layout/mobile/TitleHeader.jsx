@@ -1,22 +1,27 @@
 import { IoMoonSharp, IoSunnyOutline } from "react-icons/io5"
 import Button from "./Button"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
+const initalStateDarkMode = localStorage.getItem('theme') === 'dark';
 
 const TitleHeader = () => {
-    const [darkMode, setDarkMode ] = useState(false)
+    const [darkMode, setDarkMode ] = useState(initalStateDarkMode)
 
     // EN VEZ DE USAR EL DOM DE JAVASCRIPT, EN REACT USAR EL useRef()
-    const ref = useRef(null);
+    // const ref = useRef(null);
     
     useEffect(() => {
         
         if(darkMode){
             document.documentElement.classList.add('dark')
-            localStorage.theme = 'dark'
+            // Lo que indica TailwindCSS
+            // localStorage.theme = 'dark'
+            // Lo que se debe hacer de manera tradicional
+            localStorage.setItem('theme', 'dark')
         }else{
             document.documentElement.classList.remove('dark')
-            localStorage.theme = 'light'
+            // localStorage.theme = 'light'
+            localStorage.setItem('theme', 'light')
         }
     },[darkMode])
 
@@ -26,7 +31,7 @@ const TitleHeader = () => {
 
   return (
     <div
-        className="flex items-center justify-between" ref={ref}
+        className="flex items-center justify-between  transition-all duration-1000 ease-in-out" 
     >
         <h1
             className="text-white text-2xl font-semibold tracking-[0.3em] uppercase">
