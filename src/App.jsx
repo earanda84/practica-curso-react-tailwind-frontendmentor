@@ -18,7 +18,7 @@ function App() {
   const [todos, setTodos] = useState(initialStateTodos);
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))    
+    localStorage.setItem('todos', JSON.stringify(todos))
   },[todos])
 
   // Create Todo
