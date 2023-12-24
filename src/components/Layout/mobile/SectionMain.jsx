@@ -1,11 +1,21 @@
-import Button from "./Button"
+import PropTypes from 'prop-types'
+// import Button from "./Button"
+import ButtonClearTodos from './ButtonClearTodos'
 
-const Section = () => {
+const SectionMain = ({ uncompletedTodos, clearTodos }) => {
   return (
-    <section className="flex items-center justify-between p-4">
-      <span className="text-gray-400">5 items left</span>
-      <Button className="text-gray-400" label='Clear Completed'/>
+    <section className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-md mb-8">
+      <span className={`text-gray-400 font-medium`}>{`${uncompletedTodos} items left`}`</span>
+      <div className='space-x-3'>
+        <ButtonClearTodos className="text-gray-400 font-medium" label={'Clear Completed'} clearTodos={clearTodos} action='clear' />
+      </div>
     </section>
   )
 }
-export default Section
+
+SectionMain.propTypes = {
+  uncompletedTodos: PropTypes.number,
+  clearTodos: PropTypes.func,
+  todos: PropTypes.array
+}
+export default SectionMain

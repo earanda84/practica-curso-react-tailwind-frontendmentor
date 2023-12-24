@@ -4,9 +4,9 @@ const Main = ({children}) => {
   return (
     <>
         <main className="container mx-auto mb-3 px-5">
-            <div className="bg-white rounded-md">
+            {/* <div className="bg-white rounded-md"> */}
                 {children}
-            </div>
+            {/* </div> */}
         </main>
     </>
   )
